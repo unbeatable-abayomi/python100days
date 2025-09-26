@@ -6,4 +6,5 @@ print(sys.version.split()[0])
 
 age = 20
 
-print(f"I am {age} years old.")
+print(f"I am {age} years old."[1])
+print(type(123_456_789))
