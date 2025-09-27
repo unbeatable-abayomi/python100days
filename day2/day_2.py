@@ -30,4 +30,8 @@ weight = input("What is your weight in kg? :")
   
 # result  = ( int(weight) /(float(height) * float(height)))
 bmi_as_float = ( int(weight) /(float(height) ** 2))
-print(int(bmi_as_float),type(bmi_as_float),bmi_as_float)
+print(int(bmi_as_float),type(bmi_as_float),bmi_as_float,round(bmi_as_float,3))
+
+print((7 // 3),type(7 // 3))  # floor division it returns integer
+print(7 % 3, type(7 % 3))  # modulus it returns remainder and data type is an integer
+print(4 / 2) # it returns float
