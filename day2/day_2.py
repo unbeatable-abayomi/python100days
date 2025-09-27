@@ -25,3 +25,9 @@ print(3 * (3 + 3) / 3 - 3)
 
 
 height = input("What is your height in m? :")
+
+weight = input("What is your weight in kg? :")
+  
+# result  = ( int(weight) /(float(height) * float(height)))
+bmi_as_float = ( int(weight) /(float(height) ** 2))
+print(int(bmi_as_float),type(bmi_as_float),bmi_as_float)
