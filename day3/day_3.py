@@ -16,12 +16,15 @@
 
 height = int(input("Enter your height: " ))
 
-age = int(input("Enter your age:"))
+
 
 if height >= 120:
-   if age >= 19:
-      print(f"You will pay normal price")
+   age = int(input("Enter your age:"))
+   if age < 12:
+      print(f"You will pay discount price")
+   elif age >= 12 and age <= 18:
+      print(f"You will pay half price")
    else:
-      print(f"You will pay have a discount price")
+      print(f"You have no discount price")
 else:
  print("Not eligible to ride")
