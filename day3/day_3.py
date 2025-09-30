@@ -16,15 +16,29 @@
 
 height = int(input("Enter your height: " ))
 
-
-
+bill = 0
+five_dollar_bill = 5
+seven_dollar_bill = 7
+tewelve_dollar_bill = 12
 if height >= 120:
    age = int(input("Enter your age:"))
    if age < 12:
-      print(f"You will pay discount price")
-   elif age >= 12 and age <= 18:
-      print(f"You will pay half price")
+      print(f"You will pay ${five_dollar_bill} ")
+      bill += five_dollar_bill
+   elif age <= 18:
+      print(f"You will pay ${seven_dollar_bill} ")
+      bill += seven_dollar_bill
    else:
-      print(f"You have no discount price")
+      print(f"You will pay ${tewelve_dollar_bill} ")
+      bill += tewelve_dollar_bill
+   response = input("Do you want a photo taken? Y or N: ")
+   if response == "Y":
+      print("You will pay an extra $3")
+      bill += 3
+   #    print(f"Your final bill is ${bill}")
+   # else:
+   print(f"Your final bill is ${bill}")
+
+ 
 else:
  print("Not eligible to ride")
