@@ -13,7 +13,7 @@
 #   print(f"{num} is a an even number")
 # else:
 #  print(f"{num} is a an odd number")
-
+print("Welcome to the rollercoaster!")
 height = int(input("Enter your height: " ))
 
 bill = 0
@@ -42,3 +42,19 @@ if height >= 120:
  
 else:
  print("Not eligible to ride")
+
+lets_in = input("Enter your name: ")
+
+last_two_chars = lets_in[-2:]
+print(last_two_chars, type(last_two_chars))
+if last_two_chars == "00":
+    if int(lets_in) % 4 == 0 and int(lets_in) % 400 == 0 :
+       print(f"{lets_in} is a leap year")
+    else:
+         print(f"{lets_in} is not a leap year")
+elif int(lets_in) % 4 == 0:
+    print(f"{lets_in} is a leap year")
+else:
+    print(f"{lets_in} is not a leap year")
+       
+    
