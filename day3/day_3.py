@@ -35,6 +35,7 @@ if height >= 120:
    if response == "Y":
       print("You will pay an extra $3")
       bill += 3
+      print(f"Your final bill is ${bill}")
    #    print(f"Your final bill is ${bill}")
    # else:
    print(f"Your final bill is ${bill}")
