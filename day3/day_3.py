@@ -44,7 +44,7 @@ if height >= 120:
 else:
  print("Not eligible to ride")
 
-lets_in = input("Enter your name: ")
+lets_in = input("Enter your the year: ")
 
 last_two_chars = lets_in[-2:]
 print(last_two_chars, type(last_two_chars))
@@ -59,4 +59,15 @@ else:
     print(f"{lets_in} is not a leap year")
     
        
+
+if int(lets_in) % 4 == 0:
+    if int(lets_in) % 100 == 0:
+     if int(lets_in) % 400 == 0:
+        print(f"{lets_in} is a leap year 2")
+     else:
+        print(f"{lets_in} is not a leap year 2")
+    else:
+     print(f"{lets_in} is a leap year 2")
+else:
+   print(f"{lets_in} is not a leap year 2")
     
