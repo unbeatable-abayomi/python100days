@@ -58,7 +58,7 @@ elif int(lets_in) % 4 == 0:
 else:
     print(f"{lets_in} is not a leap year")
     
-       
+     # second way of solving the problem  
 
 if int(lets_in) % 4 == 0:
     if int(lets_in) % 100 == 0:
