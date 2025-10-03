@@ -70,4 +70,39 @@ if int(lets_in) % 4 == 0:
      print(f"{lets_in} is a leap year 2")
 else:
    print(f"{lets_in} is not a leap year 2")
+
+
+
+pizza_size = input("Select Pizza S,M and L")
+pay = 0
+extra = ""
+extrachees = ""
+if pizza_size == "S":
+     pay += 15
+     extra = input(" Prepperoin Y and N")
+     if extra == "Y":
+      pay += 2
+     extrachees = input("Extra chess Y and N")
+     if extrachees == "Y":
+      pay += 1
+if pizza_size == "M":
+    pay += 20
+    extra = input(" Prepperoin Y and N")
+    if extra == "Y":
+      pay += 3
+    extrachees = input(f"Y and N")
+    if extrachees == "Y":
+      pay += 1 
+if pizza_size == "L":
+    pay += 25
+    extra = input(" Prepperoin Y and N")
+    if extra == "Y":
+      pay += 3
+    extrachees = input(f"Y and N")
+    if extrachees == "Y":
+      pay += 1
+      
+      
+      
+print(f"final pay id {pay}")
     
