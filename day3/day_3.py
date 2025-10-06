@@ -23,17 +23,20 @@ tewelve_dollar_bill = 12
 if height >= 120:
    age = int(input("Enter your age:"))
    if age < 12:
-      print(f"You will pay ${five_dollar_bill} ")
       bill += five_dollar_bill
-   elif age <= 18 :
-      print(f"You will pay ${seven_dollar_bill} ")
-      bill += seven_dollar_bill
-   elif age >= 45 and age <= 55 :
       print(f"You will pay ${bill} ")
+      
+   elif age <= 18 :
+      bill += seven_dollar_bill
+      print(f"You will pay ${bill} ")
+   
+   elif age >= 45 and age <= 55 :
+      print(f"You will pay ${bill}, it is free for you")
 
    else:
-      print(f"You will pay ${tewelve_dollar_bill} ")
       bill += tewelve_dollar_bill
+      print(f"You will pay ${bill} ")
+      
    response = input("Do you want a photo taken? Y or N: ")
    if response == "Y":
       print("You will pay an extra $3")
