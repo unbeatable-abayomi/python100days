@@ -111,4 +111,45 @@ if pizza_size == "L":
       
       
 print(f"final pay id {pay}")
+
+my_man_name = input("Enter 1st name: ")
+my_female_name = input("Enter 2nd name: ")
+t_count = "t"
+r_count = "r"
+u_count = "u"
+e_count = "e"
+l_count = "l"
+o_count = "o"
+v_count = "v"
+e_count = "e"
+fullname = my_man_name.lower() + my_female_name.lower()
+t_occurs = fullname.count(t_count)
+r_occurs = fullname.count(r_count)
+u_occurs = fullname.count(u_count)
+e_occurs = fullname.count(e_count)
+
+l_occurs = fullname.count(l_count)
+o_occurs = fullname.count(o_count)
+v_occurs = fullname.count(v_count)
+e_occurs_2 = e_occurs
+
+
+my_string = "hello world"
+char_to_find = "o"
+
+occurrence_count = my_string.count(char_to_find)
+print(f"The character '{char_to_find}' appears {occurrence_count} times in the string.")
+
+print(f"The character '{t_count}' appears {t_occurs}")
+print(f"The character '{r_count}' appears {r_occurs}")
+print(f"The character '{u_count}' appears {u_occurs}")
+print(f"The character '{e_count}' appears {e_occurs}")
+
+print(f"The character '{l_count}' appears {l_occurs}")
+print(f"The character '{o_count}' appears {o_occurs}")
+print(f"The character '{v_count}' appears {v_occurs}")
+print(f"The character '{e_count}' appears {e_occurs}")
+
+print(f"{t_occurs+r_occurs+u_occurs+e_occurs}{l_occurs+o_occurs+v_occurs+e_occurs} %")
+
     
