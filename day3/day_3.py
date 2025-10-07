@@ -134,12 +134,6 @@ v_occurs = fullname.count(v_count)
 e_occurs_2 = e_occurs
 
 
-my_string = "hello world"
-char_to_find = "o"
-
-occurrence_count = my_string.count(char_to_find)
-print(f"The character '{char_to_find}' appears {occurrence_count} times in the string.")
-
 print(f"The character '{t_count}' appears {t_occurs}")
 print(f"The character '{r_count}' appears {r_occurs}")
 print(f"The character '{u_count}' appears {u_occurs}")
