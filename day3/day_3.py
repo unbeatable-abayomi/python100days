@@ -121,7 +121,7 @@ e_count = "e"
 l_count = "l"
 o_count = "o"
 v_count = "v"
-e_count = "e"
+# e_count = "e"
 fullname = my_man_name.lower() + my_female_name.lower()
 t_occurs = fullname.count(t_count)
 r_occurs = fullname.count(r_count)
@@ -131,7 +131,7 @@ e_occurs = fullname.count(e_count)
 l_occurs = fullname.count(l_count)
 o_occurs = fullname.count(o_count)
 v_occurs = fullname.count(v_count)
-e_occurs_2 = e_occurs
+# e_occurs_2 = e_occurs
 
 
 print(f"The character '{t_count}' appears {t_occurs}")
