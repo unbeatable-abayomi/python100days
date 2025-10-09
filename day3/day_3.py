@@ -147,4 +147,9 @@ print(f"The character '{e_count}' appears {e_occurs}")
 print(f"{t_occurs+r_occurs+u_occurs+e_occurs}{l_occurs+o_occurs+v_occurs+e_occurs} %")
 
 love_score = int(f"{t_occurs+r_occurs+u_occurs+e_occurs}{l_occurs+o_occurs+v_occurs+e_occurs}")
-    
+if (love_score < 10) or (love_score > 90):
+        print(f"Your score is {love_score}, you go together like coke and mentos.")
+elif (love_score >= 40) and (love_score <= 50):
+        print(f"Your score is {love_score}, you are alright together.")
+else:
+        print(f"Your score is {love_score}.")
