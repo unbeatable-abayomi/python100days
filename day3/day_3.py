@@ -146,4 +146,5 @@ print(f"The character '{e_count}' appears {e_occurs}")
 
 print(f"{t_occurs+r_occurs+u_occurs+e_occurs}{l_occurs+o_occurs+v_occurs+e_occurs} %")
 
+love_score = int(f"{t_occurs+r_occurs+u_occurs+e_occurs}{l_occurs+o_occurs+v_occurs+e_occurs}")
     
