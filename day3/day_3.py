@@ -153,3 +153,28 @@ elif (love_score >= 40) and (love_score <= 50):
         print(f"Your score is {love_score}, you are alright together.")
 else:
         print(f"Your score is {love_score}.")
+
+
+
+# Rolacoster challange
+
+
+print("Welcome to Treasure Island Your Mission is to find the treasure")
+stand_1 = input("Where would you like to go L or R")
+# stand_2 = ""
+# stand_3 = ""
+# stand_4 = ""
+if stand_1.upper() == "L":
+   stand_2 = input("Good, Go ahead, What is your next move S or W, swim or wait")
+   if stand_2.upper() == "W":
+       stand_3 = input("Good, Go ahead, What is your next move which color Red,Yellow,or Blue, R ,Y or,B")
+       if stand_3.upper() == "Y":
+           print("You Win")
+       elif stand_3.upper() == "R" or stand_3.upper() == "B":
+           print("Game Over")
+   else:
+       print("It's game over")
+       
+   
+else:
+   print("It's game over")
