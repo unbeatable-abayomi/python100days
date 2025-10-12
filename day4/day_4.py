@@ -16,7 +16,10 @@ family_name[len(family_name):] = "ola"
 # family_name.append("ola")
 print(family_name)
 
-import random
+
+
+
+
 names = input("give me names of your friends: ")
 
 print(names.split(","))
@@ -26,10 +29,23 @@ splitted_name = names.split(",")
 
 my_randon_num = random.randint(0,len(splitted_name)-1)
 
+# random.choice(splitted_name)
 print(my_randon_num)
 
 print(f"{splitted_name[my_randon_num]} is going to pay for the dinner")
 
+
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = fruits + vegetables
+
+# dirty_dozen_2 = [*fruits, *vegetables]
+dirty_dozen_2 = [fruits, vegetables]
+
+print(dirty_dozen_2[0][0])
 
 
 
