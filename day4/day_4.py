@@ -42,10 +42,27 @@ vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
 
 dirty_dozen = fruits + vegetables
 
-# dirty_dozen_2 = [*fruits, *vegetables]
-dirty_dozen_2 = [fruits, vegetables]
-
+dirty_dozen_2 = [*fruits, *vegetables]
+# dirty_dozen_2 = [fruits, vegetables]
+print(dirty_dozen_2)
 print(dirty_dozen_2[0][0])
 
 
 
+
+row1 = ["*","*","*"]
+row2 = ["*","*","*"]
+row3 = ["*","*","*"]
+
+all_roget = [row1, row2, row3]
+
+print(f'{row1}\n{row2}\n{row3}')
+
+postion_want = input("Enter postion: ")
+lastnumber = int(postion_want[1])
+firstnumber = int(postion_want[0])
+
+all_roget[lastnumber-1][firstnumber-1] = "X"
+
+
+print(f'{row1}\n{row2}\n{row3}')
