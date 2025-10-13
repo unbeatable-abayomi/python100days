@@ -66,3 +66,33 @@ all_roget[lastnumber-1][firstnumber-1] = "X"
 
 
 print(f'{row1}\n{row2}\n{row3}')
+
+choice_number = int(input("Input your Chioce"))
+
+computer_chioce = random.randint(0,2)
+
+rock = 0
+paper = 1  
+scissors = 2
+
+if choice_number == 0:
+    if computer_chioce == 2:
+        print(f"You won Your choice {choice_number} Computer Choice {computer_chioce} ")
+    elif computer_chioce == 1:
+        print(f"You Lose Your choice {choice_number} Computer Choice {computer_chioce}")
+    elif computer_chioce == 0:
+        print(f"You Draw Your choice {choice_number} Computer Choice {computer_chioce}")
+elif choice_number == 1:
+    if computer_chioce == 0:
+        print(f"You won Your choice {choice_number} Computer Choice {computer_chioce}")
+    elif computer_chioce == 2:
+        print(f"You Lose Your choice {choice_number} Computer Choice {computer_chioce}")
+    elif computer_chioce == 1:
+        print(f"You Draw Your choice {choice_number} Computer Choice {computer_chioce}")
+elif choice_number == 2:
+    if computer_chioce == 1:
+        print(f"You won Your choice {choice_number} Computer Choice {computer_chioce}")
+    elif computer_chioce == 0:
+        print(f"You Lose Your choice {choice_number} Computer Choice {computer_chioce}")
+    elif computer_chioce == 2:
+        print(f"You Draw Your choice {choice_number} Computer Choice {computer_chioce}")
