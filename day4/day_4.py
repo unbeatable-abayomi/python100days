@@ -96,3 +96,10 @@ elif choice_number == 2:
         print(f"You Lose Your choice {choice_number} Computer Choice {computer_chioce}")
     elif computer_chioce == 2:
         print(f"You Draw Your choice {choice_number} Computer Choice {computer_chioce}")
+else:
+    print("Invalid Input, You Lose")
+
+# Make sure too write an alternative to above code
+
+# if you want to use the emoji in your code
+# https://www.webfx.com/tools/emoji-cheat-sheet/
