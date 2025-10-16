@@ -22,6 +22,6 @@ print(all_splitted_mynumber,len(splitted_mynumber))
 print(all_splitted_mynumber/len(splitted_mynumber))
 print(round(all_splitted_mynumber/len(splitted_mynumber)))
 
-for i in range(7, 9):
-    print(i)
+# for i in range(7, 9):
+#     print(i)
 
