@@ -45,11 +45,13 @@ print(all_splitted_mynumber,len(splitted_mynumber))
 print(all_splitted_mynumber/len(splitted_mynumber))
 print(round(all_splitted_mynumber/len(splitted_mynumber)))
 
-allhundred = 0
-for i in range(0, 101):
-    print(i)
-    allhundred += i
-    
-print(allhundred)
+
+alleven = 0
+
+for i in range(0,101):
+    if i % 2 == 0:
+      print(i,"first")
+      alleven += i
+print(alleven)
 
 
