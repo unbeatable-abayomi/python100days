@@ -54,4 +54,10 @@ for i in range(0,101):
       alleven += i
 print(alleven)
 
+alleven2 = 0
+for i in range(0,101,2):
+      print(i,"second")
+      alleven2 += i
+print(alleven2)
+
 
