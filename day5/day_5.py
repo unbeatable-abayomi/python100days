@@ -60,4 +60,14 @@ for i in range(0,101,2):
       alleven2 += i
 print(alleven2)
 
+# Fizzbuzz problem
+for num in range (1, 101):
+    if num % 3 == 0 and num % 5 == 0:
+        print("Fizzbuzz")
+    elif num % 5 == 0:
+        print("Buzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    else:
+      print(num) 
 
