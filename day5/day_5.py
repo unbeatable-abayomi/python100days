@@ -87,8 +87,9 @@ countOfLetter = int(input("How many letters do you want in your password : "))
 countOfSpecial = int(input("How many Special character do you want in your password : "))
 countOfnumbers = int(input("How many Numbers do you want in your password : "))
 
-passwordGenerated = ''
+passwordGenerated = '' #Change to array/list
 for pl in range(1, countOfLetter+1):
+    # Instead try random.choice(allalphas) here it's a one liner with the append function
     selectedLetter = random.randint(0,len(allalphas)-1)
     passwordGenerated += allalphas[selectedLetter]
 for pl in range(1, countOfSpecial+1):
