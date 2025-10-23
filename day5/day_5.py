@@ -100,3 +100,5 @@ for pl in range(1, countOfnumbers+1):
     passwordGenerated += allnumber[selectedNumber]
     
 print(f" Here is your password {passwordGenerated}")
+
+randomizedPassword = ''.join(random.sample(passwordGenerated, len(passwordGenerated)))
