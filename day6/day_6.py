@@ -81,3 +81,8 @@
 # ---
 
 # Let me know if you want to see an architecture diagram or how they interact in real clusters.
+
+def greet(name):
+    print(f"Hello, {name}!")        
+greet("Alice")
+greet("Bob")
