@@ -86,3 +86,8 @@ def greet(name):
     print(f"Hello, {name}!")        
 greet("Alice")
 greet("Bob")
+
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
