@@ -91,3 +91,30 @@ def add(a, b):
     return a + b
 
 result = add(5, 3)
+
+
+# Hurdle =1
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+
+
+def jump():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+numbers_of_jump = 6
+while numbers_of_jump > 0:
+   jump()
+   numbers_of_jump -= 1
+   print(numbers_of_jump)
+for i in range(6):
+   jump()
