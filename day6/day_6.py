@@ -122,3 +122,11 @@ for i in range(6):
  # Hurdle =2
 while at_goal() == False:
       jump()
+
+# Hurdle = 2 Another way
+while at_goal() != True:
+      jump()
+
+# Hurdle = 3 Yet Another way
+while not at_goal():
+      jump()      
