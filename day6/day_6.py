@@ -118,3 +118,7 @@ while numbers_of_jump > 0:
    print(numbers_of_jump)
 for i in range(6):
    jump()
+
+ # Hurdle =2
+while at_goal() == False:
+      jump()
