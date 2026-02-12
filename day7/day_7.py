@@ -12,7 +12,8 @@ guess = input("Guess a letter: ").lower()
 print(chosen_word, guess)
 outputs = []
 for n in chosen_word:
-    outputs.append("_")
+    #outputs.append("_")
+    outputs += "_"
 
 print(outputs)
 
