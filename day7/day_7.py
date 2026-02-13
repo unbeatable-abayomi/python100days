@@ -1,5 +1,54 @@
 import random
-
+HANGMANPICS = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+========='''] 
 r = random.randint(0,2) 
 
 word_list = ["ardvark","baboon","camel"]
@@ -27,15 +76,26 @@ print(outputs)
 #      rr -= 1
 print(chosen_word)
 end_of_game = False
+track = 7
+track2 = -1
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
-    for p in range(len(chosen_word)):     
-            if chosen_word[p] == guess:
-                outputs[p]=guess
+    if guess not in chosen_word:
+          track -= 1
+          track2 += 1
+          print(HANGMANPICS[track2])
+    else:
+        for p in range(len(chosen_word)):     
+                if chosen_word[p] == guess:
+                    outputs[p]=guess
+    if track == 0:
+        end_of_game = True 
+        print("You Lose")     
+                
     print(outputs)
     if "_" not in outputs:
          end_of_game = True
-print("You win")
+         print("You win")
 # for p in range(len(chosen_word)):
 #     if chosen_word[p] == guess:
       
