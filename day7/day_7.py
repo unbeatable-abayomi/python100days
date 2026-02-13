@@ -2,13 +2,6 @@ import random
 HANGMANPICS = ['''
   +---+
   |   |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
   O   |
       |
       |
@@ -76,7 +69,7 @@ print(outputs)
 #      rr -= 1
 print(chosen_word)
 end_of_game = False
-track = 7
+track = 6
 track2 = -1
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
