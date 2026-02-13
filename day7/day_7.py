@@ -3,45 +3,50 @@ HANGMANPICS = ['''
   +---+
   |   |
   O   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
  /|\  |
+ / \  |
       |
-      |
-=========''', '''
+=========''',
+'''
   +---+
   |   |
   O   |
  /|\  |
  /    |
       |
-=========''', '''
+=========''', 
+'''
   +---+
   |   |
   O   |
- /|\  |
- / \  |
+ /|   |
       |
-========='''] 
+      |
+=========''', 
+'''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', 
+'''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', 
+'''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''']
 r = random.randint(0,2) 
 
 word_list = ["ardvark","baboon","camel"]
@@ -69,19 +74,18 @@ print(outputs)
 #      rr -= 1
 print(chosen_word)
 end_of_game = False
-track = 6
-track2 = -1
+lives = 6
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
     if guess not in chosen_word:
-          track -= 1
-          track2 += 1
-          print(HANGMANPICS[track2])
+          lives -= 1
+          print(HANGMANPICS[lives])
+          print(f"You only have {lives} left")
     else:
         for p in range(len(chosen_word)):     
                 if chosen_word[p] == guess:
                     outputs[p]=guess
-    if track == 0:
+    if lives == 0:
         end_of_game = True 
         print("You Lose")     
                 
