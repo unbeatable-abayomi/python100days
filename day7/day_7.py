@@ -26,11 +26,16 @@ print(outputs)
 #      print(outputs)
 #      rr -= 1
 print(chosen_word)
-guess = input("Guess a letter: ").lower()
-for p in range(len(chosen_word)):     
-        if chosen_word[p] == guess:
-             outputs[p]=guess
-print(outputs)
+is_game_end = False
+while not is_game_end:
+    guess = input("Guess a letter: ").lower()
+    for p in range(len(chosen_word)):     
+            if chosen_word[p] == guess:
+                outputs[p]=guess
+    print(outputs)
+    if "_" not in outputs:
+         is_game_end = True
+print("You win")
 # for p in range(len(chosen_word)):
 #     if chosen_word[p] == guess:
       
