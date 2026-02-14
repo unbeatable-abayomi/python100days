@@ -1,60 +1,13 @@
-import random
-HANGMANPICS = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========''',
-'''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========''', 
-'''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', 
-'''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', 
-'''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', 
-'''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========''']
-r = random.randint(0,2) 
 
-word_list = ["ardvark","baboon","camel"]
+import random,ascii
+# r = random.randint(0,2) 
+
+# word_list = ["ardvark","baboon","camel"]
 
 #chosen_word = random.choice(word_list)
 
-
-chosen_word = word_list[r]
+print(ascii.hangman)
+chosen_word =random.choice(ascii.words_list)
 
 # print(chosen_word, guess)
 outputs = []
@@ -75,21 +28,31 @@ print(outputs)
 print(chosen_word)
 end_of_game = False
 lives = 6
+trackguess = []
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
-    if guess not in chosen_word:
+    
+    if guess in trackguess:
+      print(f"You have already Chosen {guess}")
+    elif guess not in chosen_word and guess not in outputs:
           lives -= 1
-          print(HANGMANPICS[lives])
+          print(ascii.HANGMANPICS[lives])
           print(f"You only have {lives} left")
+          if guess not in chosen_word :
+               print(f"Your {guess} guess is not in {chosen_word}")
+    elif guess in outputs:
+         print(f"You have already Chosen {guess}")
     else:
         for p in range(len(chosen_word)):     
                 if chosen_word[p] == guess:
                     outputs[p]=guess
+    trackguess += guess
     if lives == 0:
         end_of_game = True 
         print("You Lose")     
                 
-    print(outputs)
+    print(outputs,"hell")
+
     if "_" not in outputs:
          end_of_game = True
          print("You win")
