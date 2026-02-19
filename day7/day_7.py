@@ -1,15 +1,10 @@
 
 import random,ascii
-# r = random.randint(0,2) 
-
-# word_list = ["ardvark","baboon","camel"]
-
-#chosen_word = random.choice(word_list)
 
 print(ascii.hangman)
 chosen_word =random.choice(ascii.words_list)
 
-# print(chosen_word, guess)
+
 outputs = []
 for n in chosen_word:
     #outputs.append("_")
