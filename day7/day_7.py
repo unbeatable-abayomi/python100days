@@ -51,20 +51,6 @@ while not end_of_game:
     if "_" not in outputs:
          end_of_game = True
          print("You win")
-# for p in range(len(chosen_word)):
-#     if chosen_word[p] == guess:
-      
-#         outputs[p]=guess
-    # else: 
-      
-    #     outputs[p]= '_'
-# for index, letter in enumerate(chosen_word):
-#     if letter == guess:
-#         print(f"Yes {letter} {guess}")
-#         outputs[index]=guess
-#     else:
-#         print (f"No {letter} {guess}")
-#         outputs[index]= '_'
 
 
 
