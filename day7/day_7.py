@@ -65,11 +65,7 @@ while not end_of_game:
 #     else:
 #         print (f"No {letter} {guess}")
 #         outputs[index]= '_'
-# if guess in chosen_word:
-#     print(f"Yes {guess} is in the word {chosen_word}")
 
-# else:
-#     print(f"No {guess} is not the word {chosen_word}")
 
 
 
