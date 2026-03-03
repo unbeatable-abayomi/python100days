@@ -34,10 +34,3 @@ def greet_with_postions(name="abayomi",location="poland",surname="igwubor"):
 
 greet_with_postions('abayomi','abuja','igwubor')
 
-text = "Python is awesome"
-new_text = text.replace("awesome", "great")
-print("Modified text:", new_text)
-
-text = "Python is awesome"
-words = text.split()
-print("Words:", words)
