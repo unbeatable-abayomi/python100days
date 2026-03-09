@@ -9,4 +9,14 @@ if search:
 else:
     print("Pattern not found")
 
+a = 20
+b = 10
+
+def addition():
+    print(a + b)
+def substract():
+    print(a - b)
+
+addition()
+substract()
 
