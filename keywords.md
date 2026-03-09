@@ -36,3 +36,22 @@ Here are some important Python keywords:
 
 16. **import**: It is used to import modules or libraries to access their functions, classes, or variables.
 
+17. **from**: Used with `import` to specify which specific components from a module should be imported.
+
+18. **as**: Used with `import` to create an alias for a module, making it easier to reference in the code.
+
+19. **True**: It represents a boolean value for "true."
+
+20. **False**: It represents a boolean value for "false."
+
+21. **None**: It represents a special null value or absence of value.
+
+22. **is**: It is used for identity comparison, checking if two variables refer to the same object in memory.
+
+23. **lambda**: It is used to create small, anonymous functions (lambda functions).
+
+24. **with**: It is used for context management, ensuring that certain operations are performed before and after a block of code.
+
+25. **global**: It is used to declare a global variable within a function's scope.
+
+26. **nonlocal**: It is used to declare a variable as nonlocal, which allows modifying a variable in an enclosing (but non-global) scope.
