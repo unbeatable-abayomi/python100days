@@ -1,4 +1,4 @@
-
+import math
 #Functions
 
 def greet():
@@ -47,4 +47,4 @@ def print_cal (w=width,h=height,c=coverage):
 restules = print_cal(width,height,coverage)
 
 
-print(restules)
+print(math.ceil(restules))
