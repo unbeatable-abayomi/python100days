@@ -1,3 +1,4 @@
+
 #Functions
 
 def greet():
@@ -34,3 +35,16 @@ def greet_with_postions(name="abayomi",location="poland",surname="igwubor"):
 
 greet_with_postions('abayomi','abuja','igwubor')
 
+width = int(input("Pls input width: "))
+
+height = int(input("Pls input height: "))
+
+coverage = int(input("Pls input coverage: "))
+
+def print_cal (w=width,h=height,c=coverage):
+        return (h/w)*c
+
+restules = print_cal(width,height,coverage)
+
+
+print(restules)
