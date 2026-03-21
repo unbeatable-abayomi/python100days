@@ -54,6 +54,7 @@ check_number = int(input("Input the number to check: "))
 def prime_checker(number=check_number):
      is_prime = True
      for i in range(2,number):
+          print(f'This is the number {i}')
           if number % i == 0:
             is_prime = False
      if is_prime :
@@ -64,7 +65,7 @@ def prime_checker(number=check_number):
 
 prime_checker(check_number)
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
 direction = input("Type 'encode' or 'decode' to do either: ").lower()
@@ -73,23 +74,73 @@ text = input("Type the text that you want to either encode or decode: ").lower()
 
 shift_n = int(input("input shift: "))
 
-def encrpty (plain_text, shift_amount):
-     cipher_text = ''
-     for letter in plain_text:
-        if letter not in alphabet:
-            cipher_text += letter
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+
+def caser(word,shfit_count,direction):
+    end_text = ""
+    if direction == 'decode':
+       shfit_count *= -1
+    for letter in word:
+        if letter in alphabet:
+           position=alphabet.index(letter)
+           new_posistion = position + shfit_count
+           end_text += alphabet[new_posistion]
         else:
-            position=alphabet.index(letter)
-            shift_position = position + shift_amount
-            print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
-            if shift_position >= len(alphabet):
-                new_shift_position = shift_position - len(alphabet)
-                new_letter = alphabet[new_shift_position+1]
-                cipher_text += new_letter
-            else:
-             new_letter = alphabet[shift_position] 
-             cipher_text += new_letter
-     print(f'The is the encrptyed text {cipher_text}')
+           end_text += letter
+    print(f'Your {direction} text of {word} is now {end_text}')
+    
+
+# def encrypt(words,shfit_number):
+#     decrty_word = ''
+#     for letter in words:
+#         position=alphabet.index(letter)
+#         shifted_posistion = position + shfit_number
+#         decrty_word += alphabet[shifted_posistion]
+#     print(f'This is the new word {decrty_word}')
+# def decrypt(words,shfit_number):
+#     decrty_word = ''
+#     for letter in word:
+#         position = alphabet.index(letter)
+#         new_posistion = position - shfit_number
+#         decrty_word += alphabet[new_posistion]
+#     print(f'This is the new word {decrty_word}')
+# decrypt(words=word,shfit_number=shfit_count)
+# encrypt(words=word,shfit_number=shfit_count)
+#number_to_check = int(input('Input number'))
+# def prime_check(number):
+#     is_prime = False
+#     for i in range (2,number):
+#         if number % i == 0:
+#           is_prime = True
+#     if is_prime:
+#         print(f'{number} is not prime number')
+#     else:
+#         print(f'{number} is a prime number')
+        
+# prime_check(number=number_to_check)
+
+
+
+# def encrpty (plain_text, shift_amount):
+#      cipher_text = ''
+#      for letter in plain_text:
+#         if letter not in alphabet:
+#             cipher_text += letter
+#         else:
+#             position=alphabet.index(letter)
+#             shift_position = position + shift_amount
+#             print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
+#             if shift_position >= len(alphabet):
+#                 new_shift_position = shift_position - len(alphabet)
+#                 new_letter = alphabet[new_shift_position+1]
+#                 cipher_text += new_letter
+#             else:
+#              new_letter = alphabet[shift_position] 
+#              cipher_text += new_letter
+#      print(f'The is the encrptyed text {cipher_text}')
 
 
 # def decrpty (plain_text, shift_amount):
@@ -116,8 +167,8 @@ def encrpty (plain_text, shift_amount):
 # if direction == 'decode':
 #    decrpty(plain_text=text,shift_amount=shift_n)
 
-if direction == 'encode':
-   encrpty(plain_text=text,shift_amount=shift_n)
+# if direction == 'encode':
+#    encrpty(plain_text=text,shift_amount=shift_n)
 
 
 
