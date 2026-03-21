@@ -92,6 +92,17 @@ def caser(word,shfit_count,direction):
            end_text += letter
     print(f'Your {direction} text of {word} is now {end_text}')
     
+should_contiue = True
+while should_contiue:
+    directions = input("Input either 'encode' or 'decode' :")
+    words=input("Input word: ")
+    shfit_counts  = int(input('input the amount: '))
+    shfit_counts = shfit_counts % 26
+    caser(word=words,shfit_count=shfit_counts,direction=directions)
+    result = input('Type Yes or No to continue')
+    if result == 'no':
+        should_contiue = False
+        print("Goodbye")
 
 # def encrypt(words,shfit_number):
 #     decrty_word = ''
