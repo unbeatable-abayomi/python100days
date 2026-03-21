@@ -76,42 +76,45 @@ shift_n = int(input("input shift: "))
 def encrpty (plain_text, shift_amount):
      cipher_text = ''
      for letter in plain_text:
-        position=alphabet.index(letter)
-        shift_position = position + shift_amount
-        print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
-        if shift_position >= len(alphabet):
-            new_shift_position = shift_position - len(alphabet)
-            new_letter = alphabet[new_shift_position]
+        if letter not in alphabet:
+            cipher_text += letter
         else:
-          new_letter = alphabet[shift_position]
-        cipher_text += new_letter
+            position=alphabet.index(letter)
+            shift_position = position + shift_amount
+            print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
+            if shift_position >= len(alphabet):
+                new_shift_position = shift_position - len(alphabet)
+                new_letter = alphabet[new_shift_position]
+            else:
+             new_letter = alphabet[shift_position] 
+             cipher_text += new_letter
      print(f'The is the encrptyed text {cipher_text}')
 
 
-def decrpty (plain_text, shift_amount):
-     cipher_text = ''
-     for letter in plain_text:
-        position=alphabet.index(letter)
-        shift_position = position - shift_amount
-        print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
-        if shift_position == 0:
-            print(f' Shift {shift_position}')
-            new_shift_position = len(alphabet) - len(alphabet) 
-            print(f' new Shift {new_shift_position}')
-            new_letter = alphabet[new_shift_position]
-        elif shift_position < 0:
-            print(f' Shift {shift_position}')
-            new_shift_position = len(alphabet) + shift_position
-            print(f' new Shift {new_shift_position}')
-            new_letter = alphabet[new_shift_position]
-        else:
-          new_letter = alphabet[shift_position]
-        cipher_text += new_letter
-     print(f'The is the encrptyed text {cipher_text}')
+# def decrpty (plain_text, shift_amount):
+#      cipher_text = ''
+#      for letter in plain_text:
+#         position=alphabet.index(letter)
+#         shift_position = position - shift_amount
+#         print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
+#         if shift_position == 0:
+#             print(f' Shift {shift_position}')
+#             new_shift_position = len(alphabet) - len(alphabet) 
+#             print(f' new Shift {new_shift_position}')
+#             new_letter = alphabet[new_shift_position]
+#         elif shift_position < 0:
+#             print(f' Shift {shift_position}')
+#             new_shift_position = len(alphabet) + shift_position
+#             print(f' new Shift {new_shift_position}')
+#             new_letter = alphabet[new_shift_position]
+#         else:
+#           new_letter = alphabet[shift_position]
+#         cipher_text += new_letter
+#      print(f'The is the encrptyed text {cipher_text}')
 
-if direction == 'decode':
-   decrpty(plain_text=text,shift_amount=shift_n)
-   
+# if direction == 'decode':
+#    decrpty(plain_text=text,shift_amount=shift_n)
+
 if direction == 'encode':
    encrpty(plain_text=text,shift_amount=shift_n)
 
