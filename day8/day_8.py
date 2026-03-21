@@ -84,7 +84,8 @@ def encrpty (plain_text, shift_amount):
             print(f'shift post {shift_position} posistion {position} and lenfgt {len(alphabet)}')
             if shift_position >= len(alphabet):
                 new_shift_position = shift_position - len(alphabet)
-                new_letter = alphabet[new_shift_position]
+                new_letter = alphabet[new_shift_position+1]
+                cipher_text += new_letter
             else:
              new_letter = alphabet[shift_position] 
              cipher_text += new_letter
