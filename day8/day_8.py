@@ -1,62 +1,64 @@
-import math
-#Functions
+# import math
+# #Functions
 
-def greet():
-    print("Hoday")
-    print("Hope everything")
-    print("Going Smooth")
+# def greet():
+#     print("Hoday")
+#     print("Hope everything")
+#     print("Going Smooth")
     
-greet()
+# greet()
 
-def greet_with_name(name):
-    print(f'Hello {name}')
-    print(f'Hope everthing is fine {name}')
-    print(f"All going smooth {name}")
+# def greet_with_name(name):
+#     print(f'Hello {name}')
+#     print(f'Hope everthing is fine {name}')
+#     print(f"All going smooth {name}")
 
-name = 'abayomi'
-greet_with_name(name)
+# name = 'abayomi'
+# greet_with_name(name)
 
-#Functions with more the one parameter
+# #Functions with more the one parameter
 
-def greet_with(name,location):
-    print(f'Hi {name} where your current location')
-    print(f"Hi i'm currently in {location}")
+# def greet_with(name,location):
+#     print(f'Hi {name} where your current location')
+#     print(f"Hi i'm currently in {location}")
 
-greet_with(name,'poland')
-
-
-#Keyword Functions
-
-def greet_with_postions(name="abayomi",location="poland",surname="igwubor"):
-    print(f'Hi yomi this is your surname {surname}')
-    print(f'So {name} is your firstname')
-    print(f'You are located in {location}')
+# greet_with(name,'poland')
 
 
-greet_with_postions('abayomi','abuja','igwubor')
+# #Keyword Functions
 
-width = int(input("Pls input width: "))
-
-height = int(input("Pls input height: "))
-
-coverage = int(input("Pls input coverage: "))
-
-def print_cal (w=width,h=height,c=coverage):
-        return (h/w)*c
-
-restules = print_cal(width,height,coverage)
+# def greet_with_postions(name="abayomi",location="poland",surname="igwubor"):
+#     print(f'Hi yomi this is your surname {surname}')
+#     print(f'So {name} is your firstname')
+#     print(f'You are located in {location}')
 
 
-print(math.ceil(restules))
+# greet_with_postions('abayomi','abuja','igwubor')
+
+# width = int(input("Pls input width: "))
+
+# height = int(input("Pls input height: "))
+
+# coverage = int(input("Pls input coverage: "))
+
+# def print_cal (w=width,h=height,c=coverage):
+#         return (h/w)*c
+
+# restules = print_cal(width,height,coverage)
+
+
+# print(math.ceil(restules))
 
 check_number = int(input("Input the number to check: "))
 
 def prime_checker(number=check_number):
      is_prime = True
      for i in range(2,number):
+          print(f'This is the main number {number}')
           print(f'This is the number {i}')
           if number % i == 0:
-            is_prime = False
+             is_prime = False
+             print(f"This is {is_prime}")
      if is_prime :
           print(f"{number} is a prime number")
      else:
@@ -77,6 +79,17 @@ shift_n = int(input("input shift: "))
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+def encrypt(plain_text,shfit_amount):
+    chiper_text=''
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        new_position = position + shfit_amount
+        new_letter = alphabet(new_position)
+        chiper_text += new_letter
+    print(f"The encoded text is {chiper_text}")
+
+
+encrypt(plain_text=text,shfit_amount=shift_n)
 
 
 def caser(word,shfit_count,direction):
@@ -103,7 +116,7 @@ while should_contiue:
     if result == 'no':
         should_contiue = False
         print("Goodbye")
-
+# ==============================
 # def encrypt(words,shfit_number):
 #     decrty_word = ''
 #     for letter in words:
