@@ -89,7 +89,19 @@ def encrypt(plain_text,shfit_amount):
     print(f"The encoded text is {chiper_text}")
 
 
-encrypt(plain_text=text,shfit_amount=shift_n)
+
+def decrypt(cipher_text,shfit_amount):
+     plain_text = ""
+     for letter in cipher_text:
+          position = alphabet.index(letter)
+          new_position = position - shfit_amount
+          plain_text += alphabet[new_position]
+     print(f"The encoded text is {plain_text}")
+
+if direction == 'encode':
+     encrypt(plain_text=text,shfit_amount=shift_n)
+elif direction == 'decode':
+     decrypt(cipher_text=text,shfit_amount=shift_n)
 
 
 # def caser(word,shfit_count,direction):
