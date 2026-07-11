@@ -77,14 +77,14 @@ text = input("Type the text that you want to either encode or decode: ").lower()
 shift_n = int(input("input shift: "))
 
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def encrypt(plain_text,shfit_amount):
     chiper_text=''
     for letter in plain_text:
         position = alphabet.index(letter)
         new_position = position + shfit_amount
-        new_letter = alphabet(new_position)
+        new_letter = alphabet[new_position]
         chiper_text += new_letter
     print(f"The encoded text is {chiper_text}")
 
@@ -92,30 +92,30 @@ def encrypt(plain_text,shfit_amount):
 encrypt(plain_text=text,shfit_amount=shift_n)
 
 
-def caser(word,shfit_count,direction):
-    end_text = ""
-    if direction == 'decode':
-       shfit_count *= -1
-    for letter in word:
-        if letter in alphabet:
-           position=alphabet.index(letter)
-           new_posistion = position + shfit_count
-           end_text += alphabet[new_posistion]
-        else:
-           end_text += letter
-    print(f'Your {direction} text of {word} is now {end_text}')
+# def caser(word,shfit_count,direction):
+#     end_text = ""
+#     if direction == 'decode':
+#        shfit_count *= -1
+#     for letter in word:
+#         if letter in alphabet:
+#            position=alphabet.index(letter)
+#            new_posistion = position + shfit_count
+#            end_text += alphabet[new_posistion]
+#         else:
+#            end_text += letter
+#     print(f'Your {direction} text of {word} is now {end_text}')
     
-should_contiue = True
-while should_contiue:
-    directions = input("Input either 'encode' or 'decode' :")
-    words=input("Input word: ")
-    shfit_counts  = int(input('input the amount: '))
-    shfit_counts = shfit_counts % 26
-    caser(word=words,shfit_count=shfit_counts,direction=directions)
-    result = input('Type Yes or No to continue')
-    if result == 'no':
-        should_contiue = False
-        print("Goodbye")
+# should_contiue = True
+# while should_contiue:
+#     directions = input("Input either 'encode' or 'decode' :")
+#     words=input("Input word: ")
+#     shfit_counts  = int(input('input the amount: '))
+#     shfit_counts = shfit_counts % 26
+#     caser(word=words,shfit_count=shfit_counts,direction=directions)
+#     result = input('Type Yes or No to continue')
+#     if result == 'no':
+#         should_contiue = False
+#         print("Goodbye")
 # ==============================
 # def encrypt(words,shfit_number):
 #     decrty_word = ''
