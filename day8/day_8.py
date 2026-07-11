@@ -70,39 +70,65 @@ prime_checker(check_number)
 # alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
-direction = input("Type 'encode' or 'decode' to do either: ").lower()
 
-text = input("Type the text that you want to either encode or decode: ").lower()
-
-shift_n = int(input("input shift: "))
 
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-def encrypt(plain_text,shfit_amount):
-    chiper_text=''
-    for letter in plain_text:
-        position = alphabet.index(letter)
-        new_position = position + shfit_amount
-        new_letter = alphabet[new_position]
-        chiper_text += new_letter
-    print(f"The encoded text is {chiper_text}")
+# def encrypt(plain_text,shfit_amount):
+#     chiper_text=''
+#     for letter in plain_text:
+#         position = alphabet.index(letter)
+#         new_position = position + shfit_amount
+#         new_letter = alphabet[new_position]
+#         chiper_text += new_letter
+#     print(f"The encoded text is {chiper_text}")
 
 
 
-def decrypt(cipher_text,shfit_amount):
-     plain_text = ""
-     for letter in cipher_text:
-          position = alphabet.index(letter)
-          new_position = position - shfit_amount
-          plain_text += alphabet[new_position]
-     print(f"The encoded text is {plain_text}")
+# def decrypt(cipher_text,shfit_amount):
+#      plain_text = ""
+#      for letter in cipher_text:
+#           position = alphabet.index(letter)
+#           new_position = position - shfit_amount
+#           plain_text += alphabet[new_position]
+#      print(f"The encoded text is {plain_text}")
 
-if direction == 'encode':
-     encrypt(plain_text=text,shfit_amount=shift_n)
-elif direction == 'decode':
-     decrypt(cipher_text=text,shfit_amount=shift_n)
+# if direction == 'encode':
+#      encrypt(plain_text=text,shfit_amount=shift_n)
+# elif direction == 'decode':
+#      decrypt(cipher_text=text,shfit_amount=shift_n)
 
+
+
+def caesar(start_text,shift_amount,cipher_direction):
+     end_text=""
+     if cipher_direction == "decode":
+          shift_amount *= -1
+     for char in start_text:
+          if char in alphabet:
+             
+             position = alphabet.index(char)
+          # if cipher_direction == "encode":
+          #    new_position = position + shift_amount
+             new_position = position + shift_amount
+             end_text += alphabet[new_position]
+          else:
+               end_text += char
+     print(f"The {cipher_direction}d {end_text}")
+should_continue = True
+
+while should_continue:
+     direction = input("Type 'encode' or 'decode' to do either: ").lower()
+     text = input("Type the text that you want to either encode or decode: ").lower()
+     shift_n = int(input("input shift: "))
+
+     shift_n = shift_n % 26
+     caesar(start_text=text,shift_amount=shift_n,cipher_direction=direction)
+     result = input("Type 'yes' if you want to go again. Otherwise no")
+     if result.lower() == "no":
+          should_continue = False
+          print("Goodbye....")
 
 # def caser(word,shfit_count,direction):
 #     end_text = ""
