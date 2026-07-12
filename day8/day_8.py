@@ -175,18 +175,7 @@ while should_continue:
 #     print(f'This is the new word {decrty_word}')
 # decrypt(words=word,shfit_number=shfit_count)
 # encrypt(words=word,shfit_number=shfit_count)
-#number_to_check = int(input('Input number'))
-# def prime_check(number):
-#     is_prime = False
-#     for i in range (2,number):
-#         if number % i == 0:
-#           is_prime = True
-#     if is_prime:
-#         print(f'{number} is not prime number')
-#     else:
-#         print(f'{number} is a prime number')
-        
-# prime_check(number=number_to_check)
+
 
 
 
