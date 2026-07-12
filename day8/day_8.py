@@ -67,7 +67,6 @@ def prime_checker(number=check_number):
 
 prime_checker(check_number)
 
-# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
 
@@ -75,29 +74,34 @@ prime_checker(check_number)
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-# def encrypt(plain_text,shfit_amount):
-#     chiper_text=''
-#     for letter in plain_text:
-#         position = alphabet.index(letter)
-#         new_position = position + shfit_amount
-#         new_letter = alphabet[new_position]
-#         chiper_text += new_letter
-#     print(f"The encoded text is {chiper_text}")
+def myown_ceaer(direction,shift_amount,word):
+     endtext = ""
+     if direction == "decode":
+          shift_amount *= -1
+     
+     for char in word:
+          if char in alphabet:
+               position = alphabet.index(char)
+               new_position = position + shift_amount
+               endtext += alphabet[new_position]
+          else:
+               endtext += char
+
+check_looping = True
+
+while check_looping:
+      direction_ch = input("Please are trying to encode or decode")
+      which_word = input("Enter the word")
+      shift_amount = int(input("What is thwe shift amount"))
+
+      myown_ceaer(direction_ch,shift_amount,which_word)
+      yes_or_no = input("Will you like to continue,Type yes or No")
+      
+      if yes_or_no == "no":
+           check_looping = False
+           print("Goodbay")
 
 
-
-# def decrypt(cipher_text,shfit_amount):
-#      plain_text = ""
-#      for letter in cipher_text:
-#           position = alphabet.index(letter)
-#           new_position = position - shfit_amount
-#           plain_text += alphabet[new_position]
-#      print(f"The encoded text is {plain_text}")
-
-# if direction == 'encode':
-#      encrypt(plain_text=text,shfit_amount=shift_n)
-# elif direction == 'decode':
-#      decrypt(cipher_text=text,shfit_amount=shift_n)
 
 
 
@@ -183,6 +187,9 @@ while should_continue:
 #         print(f'{number} is a prime number')
         
 # prime_check(number=number_to_check)
+
+
+
 
 
 
