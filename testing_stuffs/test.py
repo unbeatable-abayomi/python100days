@@ -1,5 +1,37 @@
 #prime checker
 
+alpheat = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+
+def function_chip(dd,ss,ww):
+     end_text = ''
+     if dd == "decode":
+          ss *= -1
+     for char in ww:
+          if char in alpheat:
+             position = alpheat.index(char)
+             new_postion = position + ss
+             end_text += alpheat[new_postion]
+          else:
+               end_text += char
+
+lestkeepthelop = True
+while lestkeepthelop:
+    dirc = input("decode or encode")
+    shift_nm = int(input("What is the shift number"))
+    word_to = input("What word")
+
+    shift_nm = shift_nm % 26
+
+    function_chip(dirc,shift_nm,word_to)
+
+    based_on = input("Do we continue. yes or no")
+    if based_on == "no":
+         lestkeepthelop = False
+         print("Byyyyyyyyeeeee")
+
+
 
 # def prime_checker(number):
 #    is_prime = True
@@ -13,7 +45,7 @@
 
 #       print(f"This number {number} is not a prime")
 
-alpheat = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
 
 
 # check_num = int(input("input your number"))
@@ -49,3 +81,5 @@ while should_continue:
            should_continue = False
            print("ByeBye")
    
+
+
