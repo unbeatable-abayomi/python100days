@@ -1,3 +1,18 @@
+import os
+import platform
+
+def clear_screen():
+    # Detect the operating system
+    if platform.system() == "Windows":
+        os.system('cls')
+    else:
+        # This covers Linux (like your Ubuntu laptop) and macOS
+        os.system('clear')
+
+# Call the function to clear the screen
+clear_screen()
+
+
 programming_dictionary = {
     "Bug": "An error in a program that prevents the program from running as expected.",
     "Function": "A piece of code that you can easily call over and over again.",
@@ -103,5 +118,50 @@ add_new_country("Brazil",['Sao Paulo','Rio de Janerio'],5)
 print(f"I've been to {travel_log2[2]['country']} {travel_log2[2]['total_visits']} times...")
 
 print(f"My favorite city was {travel_log2[2]['cities_visited'][0]}")
+
+yes_keepbiding = True
+allbiders ={}
+def input_biders(name,bid):
+    allbiders[name] = bid 
+
+def do_bidder(allbiders):
+   higest_bid = 0
+   winner_name = ''
+   for key,value in allbiders.items():
+       #bid_amount = allbiders[bidder]
+       if value > higest_bid:
+          higest_bid = value
+          winner_name = key
+   print(f"The winner is {winner_name} and with the bid of ${higest_bid}")
+
+      
+
+while yes_keepbiding:
+   name = input("Hi what is your name: ")
+   bid_amount = int(input("Input bid amount $"))
+   input_biders(name,bid_amount)
+
+   tokeepbiding = input("Is there still any more bid: Yes or No")
+   # if tokeepbiding == "yes":
+   #  clear_screen()
+   if tokeepbiding == "no":
+      yes_keepbiding = False
+      print("I will tell you a winner now")
+      do_bidder(allbiders)
+   elif tokeepbiding == "yes":
+      clear_screen()
+      
+
+      
+         
+
+            
+      
+
+
+
+
+
+
    
 
