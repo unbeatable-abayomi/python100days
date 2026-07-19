@@ -4,6 +4,56 @@ alpheat = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 
 
 
+def chiper_check (direction,shift_am,word):
+     endtext = ""
+     if direction == "decode":
+          shift_am *= -1
+     
+     for char in word:
+          if char in alpheat:
+               position = alpheat.index(char)
+               new_posi = position + shift_am
+               endtext += alpheat[new_posi]
+          else:
+               endtext += char
+
+     print(f"The {direction}d text is {endtext}")
+
+allways = True
+
+while allways:
+     dm = input("Input direation")
+     shif = int(input("Input Shift amount"))
+     wordss= input("word")
+     shif = shif % 26
+     chiper_check(dm,shif,wordss)
+
+     cn = input("How yow want continw")
+     if cn == "no":
+          allways = False
+          print("Byyyyyyyy")
+
+
+
+# def prime_work(number):
+#      isprime = True
+#      for num in range(2,number):
+#           if number % num == 0:
+#                isprime = False
+#      if isprime:
+#           print(f"Number {number} is a prime number")
+#      else:
+#           print(f"Number {number} is not a prime number")
+
+# winning=int(input("Input Your Number"))
+
+# prime_work(winning)
+
+
+
+
+
+
 def function_chip(dd,ss,ww):
      end_text = ''
      if dd == "decode":
